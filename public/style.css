@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+body {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+  font-family: 'Noto Serif', serif;
+}
+
+p, h1, h2, h3, a, ul {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #222;
+}
+
+.section-title {
+  margin-bottom: 40px;
+  margin-left: 10%;
+  font-size: 1.25em;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+}
+.content {
+  width: 80%;
+}
+
+/* index styles */
+.blogs a {
+  display: block;
+  margin: 40px 0;
+  padding-left: 30px;
+  border-left: 6px solid crimson;
+}
+.blogs a:hover h3 {
+  color: crimson;
+}
+h3 {
+  text-transform: capitalize;
+  margin-bottom: 8px;
+}
+
+/* details styles */
+.details-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+} 
+
+.icon-bin {
+  font-size: 1.2em;
+  align-self: center;
+  cursor: pointer;
+  transition: transform .1s;
+}
+
+.icon-bin:hover {
+  transform: scale(1.2);
+}
+
+/* create styles */
+.create-blog form {
+  max-width: 400px;
+}
+
+.create-blog input,
+.create-blog textarea,
+.create-blog select{
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.create-blog label{
+  display: block;
+  margin-top: 24px;
+}
+
+textarea{
+  height: 120px;
+}
+
+.create-blog button{
+  margin-top: 20px;
+  background: crimson;
+  color: white;
+  padding: 6px;
+  border: 0;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+/* about styles */
+.about-pic {
+  width: 100%;
+}
+
+.about > p {
+  text-align: justify;
+  margin-top: 30px;
+  letter-spacing:0.5px;
+}
+
+@media screen and (max-width: 425px) {
+
+}
+
+@media screen and (max-width: 768px) {
+  .section-title {
+    font-size: 1em;
+  }
+}

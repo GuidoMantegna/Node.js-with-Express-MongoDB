@@ -1,0 +1,37 @@
+
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+
+  <div class="main-container">
+        
+        <div class="details content">
+          <div class="details-title">
+            <h2><%= blog.title %></h2>
+            <i class="icon-bin" data-doc="<%= blog._id %>"></i>
+          </div>
+        
+          <p><%= blog.body %></p>
+        </div>
+        
+  </div>
+
+  <%- include("./partials/footer.ejs") %>
+
+  <script> //Every script that we include here will run in the browser, not in the server.
+    const trashcan = document.querySelector('.icon-bin');
+    trashcan.addEventListener('click', (e) => {
+      const endpoint = `/blogs/${trashcan.dataset.doc}`;
+      fetch(endpoint, {
+        method: 'DELETE',
+      })
+      .then(response => response.json())
+      .then(data => window.location.href = data.redirect)
+      .catch(err => console.log(err));
+    });
+    
+  </script>
+</body>
+</html>

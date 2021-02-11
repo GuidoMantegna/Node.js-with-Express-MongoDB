@@ -1,0 +1,80 @@
+/* nav & footer styles */
+/* NAV */
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    text-transform: uppercase;
+    flex-wrap: wrap;
+  }
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 45%;
+  }
+  nav li {
+    list-style-type: none;
+    margin: 0 10px;
+    font-weight: bold;
+  }
+  nav h1 {
+    font-size: 3em;
+
+  }
+  nav p, nav a {
+    color: #777;
+    font-weight: 300;
+    white-space: nowrap;
+  }
+
+  /* FOOTER */
+  footer {
+    color: #777;
+    text-align: center;
+    margin: 80px auto 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  footer p {
+      padding: 0 50px;
+      white-space: nowrap;
+      align-self: center;
+  }
+  .social {
+      display: flex;
+      justify-content: space-between;
+  }
+  .social > i {
+    font-size: 1.5em;
+    margin: 10px;
+    cursor: pointer;
+  }
+
+@media screen and (max-width: 425px) {
+    nav h1 {
+        font-size: 2.5em;
+    }
+    nav p {
+        font-size: .8em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .site-title {
+        width: 100%;
+    }
+    .site-title h1, .site-title p {
+        text-align: center;
+    }
+    nav ul {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .social > i {
+      font-size: 1.2em;
+    }
+}
